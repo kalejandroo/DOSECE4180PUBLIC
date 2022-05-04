@@ -1,0 +1,442 @@
+<html lang="en-US"><head>
+	<meta charset="UTF-8"><script src="https://js-agent.newrelic.com/nr-1215.min.js"></script><script async="" src="//cse.google.com/adsense/search/async-ads.js"></script><script async="" src="//cse.google.com/adsense/search/async-ads.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-2622296-54&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://cse.google.com/cse.js?cx=012643752953729813712:ui3tmcff7no"></script><script type="text/javascript" async="" src="https://cse.google.com/cse.js?cx=012643752953729813712:ui3tmcff7no"></script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"92bec3e2fc",applicationID:"161894528"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(9),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=M.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+M.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+M.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,y="addEventListener",h="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},T=w&&b&&b[y]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:T,userAgent:s,disabled:E};if(!E){t(1),t(7),g[y]?(g[y]("DOMContentLoaded",o,l(!1)),m[y]("load",r,l(!1))):(g[h]("onreadystatechange",i),m[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v17.8 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Apply - UGA Undergraduate Admissions</title>
+	<link rel="canonical" href="https://www.admissions.uga.edu/apply/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Apply - UGA Undergraduate Admissions">
+	<meta property="og:description" content="Commit to the University of Georgia by starting your application for undergraduate admission.">
+	<meta property="og:url" content="https://www.admissions.uga.edu/apply/">
+	<meta property="og:site_name" content="UGA Undergraduate Admissions">
+	<meta property="article:modified_time" content="2021-07-30T18:44:10+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="1 minute">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.admissions.uga.edu/#website","url":"https://www.admissions.uga.edu/","name":"UGA Undergraduate Admissions","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.admissions.uga.edu/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.admissions.uga.edu/apply/#webpage","url":"https://www.admissions.uga.edu/apply/","name":"Apply - UGA Undergraduate Admissions","isPartOf":{"@id":"https://www.admissions.uga.edu/#website"},"datePublished":"2019-06-06T15:18:05+00:00","dateModified":"2021-07-30T18:44:10+00:00","description":"Commit to the University of Georgia by starting your application for undergraduate admission.","breadcrumb":{"@id":"https://www.admissions.uga.edu/apply/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.admissions.uga.edu/apply/"]}]},{"@type":"BreadcrumbList","@id":"https://www.admissions.uga.edu/apply/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Apply"}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//www.admissions.uga.edu">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="UGA Undergraduate Admissions » Feed" href="https://www.admissions.uga.edu/feed/">
+<link rel="alternate" type="application/rss+xml" title="UGA Undergraduate Admissions » Comments Feed" href="https://www.admissions.uga.edu/comments/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.admissions.uga.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.3"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="https://www.admissions.uga.edu/wp-includes/js/wp-emoji-release.min.js?ver=5.8.3" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://www.admissions.uga.edu/wp-includes/css/dist/block-library/style.min.css?ver=5.8.3" type="text/css" media="all">
+<link rel="stylesheet" id="aos-css-css" href="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/css/aos.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="style-css" href="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/css/style.css?ver=1.0.0" type="text/css" media="all">
+<script type="text/javascript" src="https://www.admissions.uga.edu/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.admissions.uga.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/js/min/aos.min.js?ver=5.8.3" id="aos-js-js"></script>
+<link rel="https://api.w.org/" href="https://www.admissions.uga.edu/wp-json/"><link rel="alternate" type="application/json" href="https://www.admissions.uga.edu/wp-json/wp/v2/pages/27"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.admissions.uga.edu/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.admissions.uga.edu/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.8.3">
+<link rel="shortlink" href="https://www.admissions.uga.edu/?p=27">
+<link rel="alternate" type="application/json+oembed" href="https://www.admissions.uga.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.admissions.uga.edu%2Fapply%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.admissions.uga.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.admissions.uga.edu%2Fapply%2F&amp;format=xml">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-5577208-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-5577208-1');
+  gtag('config', 'UA-2622296-54');
+
+</script>
+<script async="async" src="https://apply.uga.edu/ping">/**/</script>
+<style type="text/css">#dp-cookie-notification *{font-family: 'Merriweather Sans', 'Tahoma', 'Helvetica Neue', 'Arial', sans-serif!important;font-size:16px!important;font-weight: 400!important;line-height:150%!important;color:#ffffff!important} #dp-cookie-notification *,#dp-cookie-notification ::after,#dp-cookie-notification ::before {box-sizing:border-box} 	#dp-cookie-notification {width: 100%;z-index:9999!important;margin:1rem!important;left:0!important;bottom:0!important;max-width: 100%;padding:15px!important;background-color:#ba0c2f!important;border: 2px solid #991718!important;border-radius:4px!important;color: #fefefe!important;box-shadow: 0 3px 6px rgba(0, 0, 0, 0.18), 0 3px 6px rgba(0, 0, 0, 0.25)} 	#dp-cookie-notification.fixed, #dp-cookie-notification.fixed.mobile{position:fixed!important;} #dp-cookie-notification.fixed{margin: 1rem!important; border-radius : 4px!important} 	#dp-cookie-notification.mobile{margin:0!important;border:0!important;border-top:4px solid #991718!important;border-radius:0!important} 	#dp-cookie-notification a{color:#fefefe!important;text-decoration:underline!important} #dp-cookie-notification p {margin:0px 10px 20px 0px!important} 	#dp-cookie-notification .dp-close-cls {font-size: 16px!important;important;background-color: #fff!important;color: #000!important;border:none!important;border-radius:4px!important;width:100px!important;padding: 8px 10px!important} 	#dp-cookie-notification .dp-close-cls:focus{color: #000!important; background-color: #f9fafb!important; border-color: #f9fafb!important; box-shadow: 0 0 0 0.25rem rgb(211 212 213 / 50%)!important} 	#dp-cookie-notification .dp-close-cls:hover{color: #000!important; background-color: #f9fafb!important; border-color: #f9fafb!important}</style><script async="" src="https://mx.technolutions.net/ping?id=3d565f7f-c467-dfd4-5497-7f02b9112ca1&amp;sid=1rbhHJwLr7xZOCEXXZF0VjRaDgH8JePOsU-7xMPENiEHfjR6IPHewE6ww7R798HxfnYOs81VwV_gqeVHtLi9GdYjhmtjXAtQ8yUUgnAdGGQ&amp;hid=124590ce-5ec3-73dc-1c8c-9aff1c92cfd8"></script><script src="https://www.google.com/cse/static/element/3e1664f444e6eb06/cse_element__en.js?usqp=CAI%3D" type="text/javascript"></script><link type="text/css" rel="stylesheet" href="https://www.google.com/cse/static/element/3e1664f444e6eb06/default+en.css"><link type="text/css" rel="stylesheet" href="https://www.google.com/cse/static/style/look/v4/minimalist.css"><script src="https://www.google.com/cse/static/element/3e1664f444e6eb06/cse_element__en.js?usqp=CAI%3D" type="text/javascript"></script><link type="text/css" rel="stylesheet" href="https://www.google.com/cse/static/element/3e1664f444e6eb06/default+en.css"><link type="text/css" rel="stylesheet" href="https://www.google.com/cse/static/style/look/v4/minimalist.css"><style type="text/css">.gsc-control-cse{font-family:arial, sans-serif}.gsc-control-cse .gsc-table-result{font-family:arial, sans-serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0))}.gsc-control-cse{border-color:#FFFFFF;background-color:#FFFFFF}input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus{border-color:#FFFFFF}.gsc-search-button-v2,.gsc-search-button-v2:hover,.gsc-search-button-v2:focus{border-color:#FFFFFF;background-color:#333333;background-image:none;filter:none}.gsc-search-button-v2 svg{fill:#FFFFFF}.gsc-tabHeader.gsc-tabhActive,.gsc-refinementHeader.gsc-refinementhActive{color:#FFFFFF;border-color:#FFFFFF;background-color:#BA0C2F}.gsc-tabHeader.gsc-tabhInactive,.gsc-refinementHeader.gsc-refinementhInactive{color:#554F47;border-color:#554F47;background-color:#FFFFFF}.gsc-webResult.gsc-result,.gsc-results .gsc-imageResult{border-color:#FFFFFF;background-color:#FFFFFF}.gsc-webResult.gsc-result:hover{border-color:#FFFFFF;background-color:#FFFFFF}.gs-webResult.gs-result a.gs-title:link,.gs-webResult.gs-result a.gs-title:link b,.gs-imageResult a.gs-title:link,.gs-imageResult a.gs-title:link b{color:#BA0C2F}.gs-webResult.gs-result a.gs-title:visited,.gs-webResult.gs-result a.gs-title:visited b,.gs-imageResult a.gs-title:visited,.gs-imageResult a.gs-title:visited b{color:#BA0C2F}.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b,.gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b{color:#BA0C2F}.gs-webResult.gs-result a.gs-title:active,.gs-webResult.gs-result a.gs-title:active b,.gs-imageResult a.gs-title:active,.gs-imageResult a.gs-title:active b{color:#BA0C2F}.gsc-cursor-page{color:#BA0C2F}a.gsc-trailing-more-results:link{color:#BA0C2F}.gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet,.gs-fileFormatType{color:#000000}.gs-webResult div.gs-visibleUrl{color:#BA0C2F}.gs-webResult div.gs-visibleUrl-short{color:#BA0C2F}.gsc-cursor-box{border-color:#FFFFFF}.gsc-results .gsc-cursor-box .gsc-cursor-page{border-color:#554F47;background-color:#FFFFFF;color:#554F47}.gsc-results .gsc-cursor-box .gsc-cursor-current-page{border-color:#FFFFFF;background-color:#BA0C2F;color:#FFFFFF}.gsc-webResult.gsc-result.gsc-promotion{border-color:#FFFFFF;background-color:#FFFFFF}.gsc-completion-title{color:#BA0C2F}.gsc-completion-snippet{color:#000000}.gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link{color:#BA0C2F}.gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited{color:#BA0C2F}.gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover{color:#BA0C2F}.gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active{color:#BA0C2F}.gs-promotion .gs-snippet,.gs-promotion .gs-title .gs-promotion-title-right,.gs-promotion .gs-title .gs-promotion-title-right *{color:#000000}.gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short{color:#BA0C2F}.gcsc-find-more-on-google{color:#BA0C2F}.gcsc-find-more-on-google-magnifier{fill:#BA0C2F}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style><style type="text/css">.gsc-control-cse{font-family:arial, sans-serif}.gsc-control-cse .gsc-table-result{font-family:arial, sans-serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0))}.gsc-control-cse{border-color:#FFFFFF;background-color:#FFFFFF}input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus{border-color:#FFFFFF}.gsc-search-button-v2,.gsc-search-button-v2:hover,.gsc-search-button-v2:focus{border-color:#FFFFFF;background-color:#333333;background-image:none;filter:none}.gsc-search-button-v2 svg{fill:#FFFFFF}.gsc-tabHeader.gsc-tabhActive,.gsc-refinementHeader.gsc-refinementhActive{color:#FFFFFF;border-color:#FFFFFF;background-color:#BA0C2F}.gsc-tabHeader.gsc-tabhInactive,.gsc-refinementHeader.gsc-refinementhInactive{color:#554F47;border-color:#554F47;background-color:#FFFFFF}.gsc-webResult.gsc-result,.gsc-results .gsc-imageResult{border-color:#FFFFFF;background-color:#FFFFFF}.gsc-webResult.gsc-result:hover{border-color:#FFFFFF;background-color:#FFFFFF}.gs-webResult.gs-result a.gs-title:link,.gs-webResult.gs-result a.gs-title:link b,.gs-imageResult a.gs-title:link,.gs-imageResult a.gs-title:link b{color:#BA0C2F}.gs-webResult.gs-result a.gs-title:visited,.gs-webResult.gs-result a.gs-title:visited b,.gs-imageResult a.gs-title:visited,.gs-imageResult a.gs-title:visited b{color:#BA0C2F}.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b,.gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b{color:#BA0C2F}.gs-webResult.gs-result a.gs-title:active,.gs-webResult.gs-result a.gs-title:active b,.gs-imageResult a.gs-title:active,.gs-imageResult a.gs-title:active b{color:#BA0C2F}.gsc-cursor-page{color:#BA0C2F}a.gsc-trailing-more-results:link{color:#BA0C2F}.gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet,.gs-fileFormatType{color:#000000}.gs-webResult div.gs-visibleUrl{color:#BA0C2F}.gs-webResult div.gs-visibleUrl-short{color:#BA0C2F}.gsc-cursor-box{border-color:#FFFFFF}.gsc-results .gsc-cursor-box .gsc-cursor-page{border-color:#554F47;background-color:#FFFFFF;color:#554F47}.gsc-results .gsc-cursor-box .gsc-cursor-current-page{border-color:#FFFFFF;background-color:#BA0C2F;color:#FFFFFF}.gsc-webResult.gsc-result.gsc-promotion{border-color:#FFFFFF;background-color:#FFFFFF}.gsc-completion-title{color:#BA0C2F}.gsc-completion-snippet{color:#000000}.gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link{color:#BA0C2F}.gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited{color:#BA0C2F}.gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover{color:#BA0C2F}.gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active{color:#BA0C2F}.gs-promotion .gs-snippet,.gs-promotion .gs-title .gs-promotion-title-right,.gs-promotion .gs-title .gs-promotion-title-right *{color:#000000}.gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short{color:#BA0C2F}.gcsc-find-more-on-google{color:#BA0C2F}.gcsc-find-more-on-google-magnifier{fill:#BA0C2F}</style></head>
+
+<body class="page-template page-template-rci-flex-template page-template-rci-flex-template-php page page-id-27 page-parent" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+<script src="https://eits-eits-scripts.s3.amazonaws.com/_resources/admin/dataprivacy-cookie.js"></script><div id="dp-cookie-notification" role="alert" aria-live="polite" aria-atomic="true" class="fixed" style="max-width: 25%;"><div class="dp-row"><div class="dp-col"><p><strong style="font-weight: normal">This website uses cookies.</strong> Find out more in our <a href="https://eits.uga.edu/access_and_security/infosec/pols_regs/policies/privacy/">Privacy Notice</a>. If you have any questions about the Privacy Notice, please contact <a href="mailto:infosec@uga.edu">infosec@uga.edu</a>.</p></div><div class="dp-button"><button id="dp-close-btn" class="dp-close-cls" aria-label="Close" type="button">OK</button></div></div></div>
+<div id="page" class="site aos-init aos-animate" data-aos="fade-in">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+    <div class="ugaheader ugaheader--black ugaheader--border ugaheader--border-red">
+        <div class="ugaheader__container">
+            <div class="ugaheader__wordmark">
+                <a class="ugaheader__wordmark-link" href="https://www.uga.edu/">
+                    University of Georgia                </a>
+            </div>
+        </div>
+    </div>
+	<header id="masthead" class="site-header clearfix" role="banner">
+		<div class="container">
+            <div class="header-inner">
+                <a id="mobile-trigger" href="#mobile-menu"><span class="sr-only">Mobile Menu Button</span></a>
+                <div class="site-logo">
+                    <a href="https://www.admissions.uga.edu/" rel="home">
+                        <img src="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/images/global/uga-admissions-logo.svg" alt="UGA Undergraduate Admissions">
+                    </a>
+                </div>
+                <span id="mobile-close"><span class="sr-only">Close Mobile Menu</span></span>
+                <nav id="site-navigation" class="main-navigation" role="navigation">
+                    <ul id="menu-main-menu" class="nav-menu">
+                        <li id="menu-item-search" class="menu-item search--toggle"><span class="sr-only">Toggle Search Bar</span></li>
+                        <li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-59"><a href="https://www.admissions.uga.edu/admissions/">Admissions</a><span class="arrow"></span>
+<ul class="sub-menu" style="background-image: url(https://www.admissions.uga.edu/wp-content/uploads/2019/07/admissions-header-bg.jpg);">
+	<li id="menu-item-69" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69"><a href="https://www.admissions.uga.edu/admissions/planning-for-uga/">Planning for UGA</a></li>
+	<li id="menu-item-70" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-70"><a href="https://www.admissions.uga.edu/admissions/admission-statistics/">Admission Statistics</a></li>
+	<li id="menu-item-71" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-71"><a href="https://www.admissions.uga.edu/admissions/first-year/">First Year</a><span class="arrow"></span>	<div class="sub-menu"><div class="menu-column">		<div id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="https://www.admissions.uga.edu/admissions/first-year/first-year-admission-criteria/">First Year Admission Criteria</a></div>
+		<div id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730"><a href="https://www.admissions.uga.edu/admissions/first-year/home-educated-students/">Home-Educated Students</a></div>
+		<div id="menu-item-731" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-731"><a href="https://www.admissions.uga.edu/admissions/first-year/college-credit/">College Credit from Testing &amp; DE</a></div>
+		<div id="menu-item-732" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-732"><a href="https://www.admissions.uga.edu/admissions/first-year/self-reported-grades/">Self-Reported Grades</a></div>
+		<div id="menu-item-733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-733"><a href="https://www.admissions.uga.edu/admissions/first-year/admissions-tips-hints-myths/">Admissions Tips, Hints &amp; Myths</a></div>
+		<div id="menu-item-3736" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3736"><a href="https://www.admissions.uga.edu/admissions/first-year/first-year-faq/">First-Year FAQ</a></div>
+	</div></div>
+</li>
+	<li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-73"><a href="https://www.admissions.uga.edu/admissions/international/">International</a><span class="arrow"></span>	<div class="sub-menu"><div class="menu-column">		<div id="menu-item-4265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4265"><a href="https://www.admissions.uga.edu/admissions/international/international-faq/">International FAQ</a></div>
+		<div id="menu-item-4266" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4266"><a href="https://isl.uga.edu">International Student Life</a></div>
+		<div id="menu-item-4267" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4267"><a href="https://globalengagement.uga.edu/international-students/incoming-international-students">Immigration Services at UGA</a></div>
+	</div></div>
+</li>
+	<li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-74"><a href="https://www.admissions.uga.edu/admissions/transfer/">Transfer</a><span class="arrow"></span>	<div class="sub-menu"><div class="menu-column">		<div id="menu-item-770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-770"><a href="https://apply.uga.edu/portal/transfer-equivalency">Transfer Equivalency</a></div>
+		<div id="menu-item-735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-735"><a href="https://www.admissions.uga.edu/admissions/transfer/transfer-faq/">Transfer FAQ</a></div>
+	</div></div>
+</li>
+	<li id="menu-item-76" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76"><a href="https://www.admissions.uga.edu/admissions/other-students/">Other Students</a></li>
+	<li id="menu-item-77" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="https://www.admissions.uga.edu/admissions/deadlines/">Deadlines</a></li>
+</ul>
+</li>
+<li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-68"><a href="https://www.admissions.uga.edu/academics/">Academics</a><span class="arrow"></span>
+<ul class="sub-menu" style="background-image: url(https://www.admissions.uga.edu/wp-content/uploads/2019/06/navigation-academics.jpg);">
+	<li id="menu-item-465" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-465"><a target="_blank" rel="noopener noreferrer" href="https://majors.admissions.uga.edu">Majors</a></li>
+	<li id="menu-item-1205" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1205"><a href="http://doubledawgs.uga.edu">Double Dawgs</a></li>
+	<li id="menu-item-466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-466"><a target="_blank" rel="noopener noreferrer" href="https://honors.uga.edu/">Honors</a></li>
+	<li id="menu-item-580" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-580"><a target="_blank" rel="noopener noreferrer" href="https://www.uga.edu/a-z/schools.html">Schools &amp; Colleges</a></li>
+</ul>
+</li>
+<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-60"><a href="https://www.admissions.uga.edu/experience/">Experience</a><span class="arrow"></span>
+<ul class="sub-menu" style="background-image: url(https://www.admissions.uga.edu/wp-content/uploads/2019/06/navigation-experience.jpg);">
+	<li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79"><a href="https://www.admissions.uga.edu/experience/athens/">Athens</a></li>
+	<li id="menu-item-467" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-467"><a href="https://www.admissions.uga.edu/experience/study-abroad/">Study Abroad</a></li>
+	<li id="menu-item-473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-473"><a target="_blank" rel="noopener noreferrer" href="https://housing.uga.edu/">Housing</a></li>
+	<li id="menu-item-470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-470"><a target="_blank" rel="noopener noreferrer" href="https://dining.uga.edu/">Dining</a></li>
+	<li id="menu-item-468" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-468"><a href="https://www.admissions.uga.edu/experience/student-services/">Student Services</a></li>
+	<li id="menu-item-471" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-471"><a href="https://www.admissions.uga.edu/experience/activities/">Activities</a></li>
+	<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="https://www.admissions.uga.edu/experience/diversity/">Diversity</a></li>
+</ul>
+</li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-61"><a href="https://www.admissions.uga.edu/afford/">Afford</a><span class="arrow"></span>
+<ul class="sub-menu" style="background-image: url(https://www.admissions.uga.edu/wp-content/uploads/2019/07/afford-header-bg.jpg);">
+	<li id="menu-item-887" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-887"><a target="_blank" rel="noopener noreferrer" href="https://osfa.uga.edu/">Financial Aid</a></li>
+	<li id="menu-item-463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-463"><a href="https://www.admissions.uga.edu/afford/ga-residency/">Georgia Residency</a></li>
+	<li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="https://www.admissions.uga.edu/afford/scholarships/">Scholarships</a></li>
+</ul>
+</li>
+<li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-27 current_page_item menu-item-has-children menu-item-62"><a href="https://www.admissions.uga.edu/apply/" aria-current="page">Apply</a><span class="arrow"></span>
+<ul class="sub-menu" style="background-image: url(https://www.admissions.uga.edu/wp-content/uploads/2019/07/apply-nav-bg.jpg);">
+	<li id="menu-item-5518" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5518"><a href="https://www.admissions.uga.edu/apply/start-application/">Start Application</a></li>
+	<li id="menu-item-778" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-778"><a href="https://apply.uga.edu/account/login?r=https%3a%2f%2fapply.uga.edu%2fapply%2fstatus">Check Status</a></li>
+	<li id="menu-item-1202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1202"><a href="https://www.admissions.uga.edu/apply/update-application/">Update Application</a></li>
+	<li id="menu-item-1201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1201"><a href="https://orientation.uga.edu/">Orientation</a></li>
+</ul>
+</li>
+<li id="menu-item-3461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3461"><a href="https://www.admissions.uga.edu/blog/">Blog</a></li>
+<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-63"><a href="https://www.admissions.uga.edu/counselors/">Counselors</a><span class="arrow"></span>
+<ul class="sub-menu" style="background-image: url(https://www.admissions.uga.edu/wp-content/uploads/2019/07/counselors-header-bg.jpg);">
+	<li id="menu-item-774" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-774"><a href="https://www.admissions.uga.edu/counselors/counselor-faq/">Counselor FAQ</a></li>
+	<li id="menu-item-775" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-775"><a href="https://apply.uga.edu/portal/counselor">Counselor Portal</a></li>
+</ul>
+</li>
+<li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-64"><a href="https://www.admissions.uga.edu/connect/">Connect</a><span class="arrow"></span>
+<ul class="sub-menu" style="background-image: url(https://www.admissions.uga.edu/wp-content/uploads/2019/07/connect-header-bg.jpg);">
+	<li id="menu-item-462" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-462"><a href="https://www.admissions.uga.edu/connect/visit-uga/">Visit UGA</a></li>
+	<li id="menu-item-771" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-771"><a href="https://apply.uga.edu/portal/meet_the_staff">Meet the Staff</a></li>
+	<li id="menu-item-4244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4244"><a href="https://www.admissions.uga.edu/connect/community-based-organizations/">Community-Based Organizations</a></li>
+	<li id="menu-item-772" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-772"><a href="https://apply.uga.edu/portal/fairs">UGA Near You</a></li>
+	<li id="menu-item-4453" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4453"><a href="https://www.admissions.uga.edu/connect/resources/">Resources</a></li>
+	<li id="menu-item-773" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-773"><a href="https://apply.uga.edu/register/?id=e6613431-a953-448d-97d3-8afa4e6b12ba">Request Information</a></li>
+</ul>
+</li>
+                    </ul>
+                </nav><!-- #site-navigation -->
+            </div>
+		</div>
+	</header><!-- #masthead -->
+    <div class="search--header">
+        <div class="container">
+            <div class="search--header-google">
+    <script>
+  (function() {
+    var cx = '012643752953729813712:ui3tmcff7no';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<div id="___gcse_0"><div class="gsc-control-searchbox-only gsc-control-searchbox-only-en" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input" placeholder="Search..."><div class="gsc-input-box" id="gsc-iw-id1"><table cellspacing="0" cellpadding="0" id="gs_id50" class="gstl_50 gsc-input" style="width: 100%; padding: 0px;" placeholder="Search..."><tbody><tr><td id="gs_tti50" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" id="gsc-i-id1" dir="ltr" spellcheck="false" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; background: url(&quot;https://www.google.com/cse/static/images/1x/en/branding.png&quot;) left center no-repeat rgb(255, 255, 255); outline: none;" placeholder="Search..."></td><td class="gsib_b"><div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" title="Clear search box" role="button" style="display: none;"><span class="gscb_a" id="gs_cb50" aria-hidden="true">×</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><button class="gsc-search-button gsc-search-button-v2"><svg width="13" height="13" viewBox="0 0 13 13"><title>search</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table></form></div></div></div>        </div>
+    </div>
+
+	<div id="content" class="site-content">
+    <section class="hero hero--internal has-image" style="background-image: url(https://www.admissions.uga.edu/wp-content/uploads/2019/06/video-thumbnail.jpg);">
+        <div class="hero--container">
+        <h1>Apply</h1>
+    </div>
+</section><div class="rci-flex-content rci-flex-content--bubble_cta aos-init aos-animate" data-aos="fade-in">
+        <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-xs-12 col-md-10 col-xl-8">
+                <span class="heading h2 text-center">UGA Application Status Login</span>                            </div>
+        </div>
+    </div>
+        
+        <div class="bubble_cta--container">
+    <a href="/apply/start-application/" class="bubble_cta" target="_self"><span class="bubble_cta--bg"></span><span class="bubble_cta--heading">Start Application</span></a><a href="https://apply.uga.edu/account/login?r=https%3a%2f%2fapply.uga.edu%2fapply%2fstatus" class="bubble_cta" target="_self"><span class="bubble_cta--bg"></span><span class="bubble_cta--heading">Check Status</span></a><a href="/apply/update-application/" class="bubble_cta" target="_self"><span class="bubble_cta--bg"></span><span class="bubble_cta--heading">Update Application</span></a><a href="https://orientation.uga.edu" class="bubble_cta" target="_self"><span class="bubble_cta--bg"></span><span class="bubble_cta--heading">Orientation</span></a>    </div>
+</div><div class="rci-flex-content rci-flex-content--basic_content aos-init" data-aos="fade-in">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col">
+            <div class="content"><p><em>To ensure the privacy and confidentiality of your personal information, your web application is encrypted by our secure server before being transmitted over the Internet. The University of Georgia is a unit of the University System of Georgia. The University of Georgia does not discriminate on the basis of race, color, national origin, sex, age, veteran status or disability in employment or admission or access to its programs and activities. Inquiries concerning this policy should be directed to the University’s Equal Opportunity Office at (706) 542-7912. If you have a disability and need assistance to obtain this publication in an alternative format, please contact the Office of Undergraduate Admissions at (706) 542-8776.</em></p>
+</div>            </div>
+        </div>
+    </div>
+</div><div class="rci-flex-content rci-flex-content--pencil_banner bg--red aos-init" data-aos="fade-in">
+    <div class="rci-flex-content--pencil_banner--inner">
+        <div class="content">
+            <span class="h3">Admission Deadlines</span>            <p>Don’t miss an essential deadline. Check on upcoming dates here.</p>
+        </div>
+                    <a class="btn btn--outline-ghost" href="/admissions/deadlines/" target="_self">Deadlines</a>
+            </div>
+</div>
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+        <div class="site-footer__container">
+            <div class="site-footer__row">    
+                <div class="site-footer__logo">
+                   <a class="site-footer__logo-link" href="https://www.uga.edu/">University of Georgia</a>
+                    
+                    <div class="site-footer__address">
+                                                <address>210 South Jackson Street<br>
+Athens, Ga 30602</address>                        <span class="footer-phone"><a href="tel:17624008800">(+1) 762-400-8800</a></span>                        <span class="footer-hours">Monday - Friday<br>
+9:00 am - 4:00 pm (EST)</span>                    </div>
+                </div>
+
+                <nav class="site-footer__links">
+                    <div class="site-footer__navigation">
+                        <div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-82" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82"><a target="_blank" rel="noopener" href="http://majors.admissions.uga.edu/">UGA Majors</a></li>
+<li id="menu-item-83" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83"><a target="_blank" rel="noopener" href="https://www.admissions.uga.edu/blog/">Admissions Blog</a></li>
+<li id="menu-item-84" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-84"><a target="_blank" rel="noopener" href="https://apply.uga.edu/portal/transfer-equivalency">Transfer Equivalency</a></li>
+<li id="menu-item-1026" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1026"><a href="https://www.admissions.uga.edu/admissions/admission-statistics/">Admission Statistics</a></li>
+<li id="menu-item-86" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-86"><a target="_blank" rel="noopener" href="https://apply.uga.edu/register/?id=e6613431-a953-448d-97d3-8afa4e6b12ba">Request Information</a></li>
+</ul></div>                    </div>
+                    <div class="site-footer__col_1">
+                        <span class="footer-nav-title">UGA Departments</span><a href="https://reg.uga.edu" target="_blank">Registrar</a><a href="https://busfin.uga.edu/bursar/" target="_blank">Bursar</a><a href="https://osfa.uga.edu" target="_blank">Financial Aid</a><a href="https://housing.uga.edu/" target="_blank">Housing</a>                    </div>
+                    <div class="site-footer__col_2">
+                        <span class="footer-nav-title">Visit Campus</span><a href="https://www.arcgis.com/apps/webappviewer/index.html?id=10832e7927124404a7119df52872af84" target="_blank">Maps</a><a href="https://tps.uga.edu/visitors" target="_blank">Parking</a><a href="/connect/visit-uga/" target="_blank">Visit Campus</a>                    </div>
+                    <div class="site-footer__subnav">
+                        ©2022 by UGA Undergraduate Admissions  |  <a href="/sitemap/">Sitemap</a>  |  <a href="https://provost.uga.edu/resources/consumerinfo/" target="_blank">Guide to Student Consumer Information</a>                    </div>
+                </nav>
+            </div>
+        </div>
+	</footer><!-- #colophon -->
+
+    <footer class="ugafooter">
+        <div class="ugafooter__container">
+            <div class="ugafooter__row ugafooter__row--primary">                    
+                <div class="ugafooter__logo">
+                   <a class="ugafooter__logo-link" href="https://www.uga.edu/">University of Georgia</a>
+                </div>
+                <nav class="ugafooter__links">
+                    <ul class="ugafooter__links-list">
+                        <li class="ugafooter__links-list-item">
+                            <a class="ugafooter__links-list-link" href="https://www.uga.edu/a-z/schools/">Schools and Colleges</a>
+                        </li>
+                        <li class="ugafooter__links-list-item">
+                            <a class="ugafooter__links-list-link" href="https://peoplesearch.uga.edu/">Directory</a>
+                        </li>
+                        <li class="ugafooter__links-list-item">
+                            <a class="ugafooter__links-list-link" href="https://my.uga.edu/">MyUGA</a>
+                        </li>
+                        <li class="ugafooter__links-list-item">
+                            <a class="ugafooter__links-list-link" href="http://hr.uga.edu/applicants/">Employment Opportunities</a>
+                        </li>
+                        <li class="ugafooter__links-list-item">
+                            <a class="ugafooter__links-list-link" href="https://mc.uga.edu/policy/trademark">Copyright and Trademarks</a>
+                        </li>
+                        <li class="ugafooter__links-list-item">
+                            <a class="ugafooter__links-list-link" href="https://eits.uga.edu/access_and_security/infosec/pols_regs/policies/privacy/">Privacy</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="ugafooter__row ugafooter__row--secondary">
+                <nav class="ugafooter__social">
+                    <span class="ugafooter__social-label">#UGA on</span>
+                    <a class="ugafooter__social-link" aria-label="UGA on Facebook" href="https://www.facebook.com/universityofga/">
+                        <i class="fab fa-fw fa-facebook-f" title="Facebook" aria-hidden=""></i>
+                    </a>
+                    <a class="ugafooter__social-link" aria-label="UGA on Twitter" href="https://twitter.com/universityofga">
+                        <i class="fab fa-fw fa-twitter" title="Twitter" aria-hidden=""></i>
+                    </a>
+                    <a class="ugafooter__social-link" aria-label="UGA on Instagram" href="https://www.instagram.com/universityofga/">
+                        <i class="fab fa-fw fa-instagram" title="Instagram" aria-hidden=""></i>
+                    </a>
+                    <a class="ugafooter__social-link" aria-label="UGA on Snapchat" href="https://www.snapchat.com/add/university-ga">
+                        <i class="fab fa-fw fa-snapchat-ghost" title="Snapchat" aria-hidden=""></i>
+                    </a>
+                    <a class="ugafooter__social-link" aria-label="UGA on YouTube" href="https://www.youtube.com/user/UniversityOfGeorgia">
+                        <i class="fab fa-fw fa-youtube" title="YouTube" aria-hidden=""></i>
+                    </a>
+                    <a class="ugafooter__social-link" aria-label="UGA on LinkedIn" href="https://www.linkedin.com/school/university-of-georgia/">
+                        <i class="fab fa-fw fa-linkedin-in" title="LinkedIn" aria-hidden=""></i>
+                    </a>
+                </nav>
+                <div class="ugafooter__address">
+                    © University of Georgia, Athens, GA 30602<br>
+                    706‑542‑3000
+                </div>
+            </div>
+        </div>
+    </footer>
+</div><!-- #page -->
+
+
+<script type="text/javascript" src="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/js/min/plugins.min.js?ver=5.8.3" id="plugins-js"></script>
+<script type="text/javascript" id="main-js-extra">
+/* <![CDATA[ */
+var globalObject = {"homeUrl":"https:\/\/www.admissions.uga.edu","searchText":"Search...","searchButton":"Go"};
+var UGAFAQ = {"open_all_text":"expand all","close_all_text":"close all","open_text":"+","close_text":"-"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.admissions.uga.edu/wp-content/themes/admissions/assets/js/min/main.min.js?ver=5.8.3" id="main-js"></script>
+<script type="text/javascript" src="https://www.admissions.uga.edu/wp-includes/js/wp-embed.min.js?ver=5.8.3" id="wp-embed-js"></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"92bec3e2fc","applicationID":"161894528","transactionName":"b1RWZEUEWxdRWkNbW1YedVNDDFoKH0tUWxleXVFIGhFQCUBVVkZR","queueTime":0,"applicationTime":288,"atts":"QxNVEg0eSBk=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script>
+
+<div id="sidr" class="sidr left" style="transition: left 0.2s ease 0s;"><div id="mobile-menu"><div class="sidr__search">
+    <script>
+  (function() {
+    var cx = '012643752953729813712:ui3tmcff7no';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<div id="___gcse_1"><div class="gsc-control-searchbox-only gsc-control-searchbox-only-en" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id2"><table cellspacing="0" cellpadding="0" id="gs_id51" class="gstl_51 gsc-input" style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti51" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" id="gsc-i-id2" dir="ltr" spellcheck="false" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; background: url(&quot;https://www.google.com/cse/static/images/1x/en/branding.png&quot;) left center no-repeat rgb(255, 255, 255); outline: none;"></td><td class="gsib_b"><div class="gsst_b" id="gs_st51" dir="ltr"><a class="gsst_a" href="javascript:void(0)" title="Clear search box" role="button" style="display: none;"><span class="gscb_a" id="gs_cb51" aria-hidden="true">×</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><button class="gsc-search-button gsc-search-button-v2"><svg width="13" height="13" viewBox="0 0 13 13"><title>search</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table></form></div></div></div><div class="sidr__inner">
+                    <ul id="menu-main-menu" class="nav-menu">
+                        <li id="menu-item-search" class="menu-item search--toggle"><span class="sr-only">Toggle Search Bar</span></li>
+                        <li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-59"><a href="https://www.admissions.uga.edu/admissions/">Admissions</a><span class="arrow"></span>
+<ul class="sub-menu" style="background-image: url(https://www.admissions.uga.edu/wp-content/uploads/2019/07/admissions-header-bg.jpg);">
+	<li id="menu-item-69" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69"><a href="https://www.admissions.uga.edu/admissions/planning-for-uga/">Planning for UGA</a></li>
+	<li id="menu-item-70" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-70"><a href="https://www.admissions.uga.edu/admissions/admission-statistics/">Admission Statistics</a></li>
+	<li id="menu-item-71" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-71"><a href="https://www.admissions.uga.edu/admissions/first-year/">First Year</a><span class="arrow"></span>	<div class="sub-menu"><div class="menu-column">		<div id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="https://www.admissions.uga.edu/admissions/first-year/first-year-admission-criteria/">First Year Admission Criteria</a></div>
+		<div id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730"><a href="https://www.admissions.uga.edu/admissions/first-year/home-educated-students/">Home-Educated Students</a></div>
+		<div id="menu-item-731" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-731"><a href="https://www.admissions.uga.edu/admissions/first-year/college-credit/">College Credit from Testing &amp; DE</a></div>
+		<div id="menu-item-732" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-732"><a href="https://www.admissions.uga.edu/admissions/first-year/self-reported-grades/">Self-Reported Grades</a></div>
+		<div id="menu-item-733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-733"><a href="https://www.admissions.uga.edu/admissions/first-year/admissions-tips-hints-myths/">Admissions Tips, Hints &amp; Myths</a></div>
+		<div id="menu-item-3736" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3736"><a href="https://www.admissions.uga.edu/admissions/first-year/first-year-faq/">First-Year FAQ</a></div>
+	</div></div>
+</li>
+	<li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-73"><a href="https://www.admissions.uga.edu/admissions/international/">International</a><span class="arrow"></span>	<div class="sub-menu"><div class="menu-column">		<div id="menu-item-4265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4265"><a href="https://www.admissions.uga.edu/admissions/international/international-faq/">International FAQ</a></div>
+		<div id="menu-item-4266" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4266"><a href="https://isl.uga.edu">International Student Life</a></div>
+		<div id="menu-item-4267" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4267"><a href="https://globalengagement.uga.edu/international-students/incoming-international-students">Immigration Services at UGA</a></div>
+	</div></div>
+</li>
+	<li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-74"><a href="https://www.admissions.uga.edu/admissions/transfer/">Transfer</a><span class="arrow"></span>	<div class="sub-menu"><div class="menu-column">		<div id="menu-item-770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-770"><a href="https://apply.uga.edu/portal/transfer-equivalency">Transfer Equivalency</a></div>
+		<div id="menu-item-735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-735"><a href="https://www.admissions.uga.edu/admissions/transfer/transfer-faq/">Transfer FAQ</a></div>
+	</div></div>
+</li>
+	<li id="menu-item-76" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76"><a href="https://www.admissions.uga.edu/admissions/other-students/">Other Students</a></li>
+	<li id="menu-item-77" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="https://www.admissions.uga.edu/admissions/deadlines/">Deadlines</a></li>
+</ul>
+</li>
+<li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-68"><a href="https://www.admissions.uga.edu/academics/">Academics</a><span class="arrow"></span>
+<ul class="sub-menu" style="background-image: url(https://www.admissions.uga.edu/wp-content/uploads/2019/06/navigation-academics.jpg);">
+	<li id="menu-item-465" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-465"><a target="_blank" rel="noopener noreferrer" href="https://majors.admissions.uga.edu">Majors</a></li>
+	<li id="menu-item-1205" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1205"><a href="http://doubledawgs.uga.edu">Double Dawgs</a></li>
+	<li id="menu-item-466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-466"><a target="_blank" rel="noopener noreferrer" href="https://honors.uga.edu/">Honors</a></li>
+	<li id="menu-item-580" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-580"><a target="_blank" rel="noopener noreferrer" href="https://www.uga.edu/a-z/schools.html">Schools &amp; Colleges</a></li>
+</ul>
+</li>
+<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-60"><a href="https://www.admissions.uga.edu/experience/">Experience</a><span class="arrow"></span>
+<ul class="sub-menu" style="background-image: url(https://www.admissions.uga.edu/wp-content/uploads/2019/06/navigation-experience.jpg);">
+	<li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79"><a href="https://www.admissions.uga.edu/experience/athens/">Athens</a></li>
+	<li id="menu-item-467" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-467"><a href="https://www.admissions.uga.edu/experience/study-abroad/">Study Abroad</a></li>
+	<li id="menu-item-473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-473"><a target="_blank" rel="noopener noreferrer" href="https://housing.uga.edu/">Housing</a></li>
+	<li id="menu-item-470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-470"><a target="_blank" rel="noopener noreferrer" href="https://dining.uga.edu/">Dining</a></li>
+	<li id="menu-item-468" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-468"><a href="https://www.admissions.uga.edu/experience/student-services/">Student Services</a></li>
+	<li id="menu-item-471" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-471"><a href="https://www.admissions.uga.edu/experience/activities/">Activities</a></li>
+	<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="https://www.admissions.uga.edu/experience/diversity/">Diversity</a></li>
+</ul>
+</li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-61"><a href="https://www.admissions.uga.edu/afford/">Afford</a><span class="arrow"></span>
+<ul class="sub-menu" style="background-image: url(https://www.admissions.uga.edu/wp-content/uploads/2019/07/afford-header-bg.jpg);">
+	<li id="menu-item-887" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-887"><a target="_blank" rel="noopener noreferrer" href="https://osfa.uga.edu/">Financial Aid</a></li>
+	<li id="menu-item-463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-463"><a href="https://www.admissions.uga.edu/afford/ga-residency/">Georgia Residency</a></li>
+	<li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="https://www.admissions.uga.edu/afford/scholarships/">Scholarships</a></li>
+</ul>
+</li>
+<li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-27 current_page_item menu-item-has-children menu-item-62"><a href="https://www.admissions.uga.edu/apply/" aria-current="page">Apply</a><span class="arrow"></span>
+<ul class="sub-menu" style="background-image: url(https://www.admissions.uga.edu/wp-content/uploads/2019/07/apply-nav-bg.jpg);">
+	<li id="menu-item-5518" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5518"><a href="https://www.admissions.uga.edu/apply/start-application/">Start Application</a></li>
+	<li id="menu-item-778" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-778"><a href="https://apply.uga.edu/account/login?r=https%3a%2f%2fapply.uga.edu%2fapply%2fstatus">Check Status</a></li>
+	<li id="menu-item-1202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1202"><a href="https://www.admissions.uga.edu/apply/update-application/">Update Application</a></li>
+	<li id="menu-item-1201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1201"><a href="https://orientation.uga.edu/">Orientation</a></li>
+</ul>
+</li>
+<li id="menu-item-3461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3461"><a href="https://www.admissions.uga.edu/blog/">Blog</a></li>
+<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-63"><a href="https://www.admissions.uga.edu/counselors/">Counselors</a><span class="arrow"></span>
+<ul class="sub-menu" style="background-image: url(https://www.admissions.uga.edu/wp-content/uploads/2019/07/counselors-header-bg.jpg);">
+	<li id="menu-item-774" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-774"><a href="https://www.admissions.uga.edu/counselors/counselor-faq/">Counselor FAQ</a></li>
+	<li id="menu-item-775" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-775"><a href="https://apply.uga.edu/portal/counselor">Counselor Portal</a></li>
+</ul>
+</li>
+<li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-64"><a href="https://www.admissions.uga.edu/connect/">Connect</a><span class="arrow"></span>
+<ul class="sub-menu" style="background-image: url(https://www.admissions.uga.edu/wp-content/uploads/2019/07/connect-header-bg.jpg);">
+	<li id="menu-item-462" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-462"><a href="https://www.admissions.uga.edu/connect/visit-uga/">Visit UGA</a></li>
+	<li id="menu-item-771" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-771"><a href="https://apply.uga.edu/portal/meet_the_staff">Meet the Staff</a></li>
+	<li id="menu-item-4244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4244"><a href="https://www.admissions.uga.edu/connect/community-based-organizations/">Community-Based Organizations</a></li>
+	<li id="menu-item-772" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-772"><a href="https://apply.uga.edu/portal/fairs">UGA Near You</a></li>
+	<li id="menu-item-4453" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4453"><a href="https://www.admissions.uga.edu/connect/resources/">Resources</a></li>
+	<li id="menu-item-773" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-773"><a href="https://apply.uga.edu/register/?id=e6613431-a953-448d-97d3-8afa4e6b12ba">Request Information</a></li>
+</ul>
+</li>
+                    </ul>
+                </div></div></div><table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 2px; display: none; top: 3px; left: -1px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gstl_51 gssb_c" style="width: 976px; display: none; top: 139px; left: -1559px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table></body></html>
